@@ -25,3 +25,7 @@ function isPangram(str) {
 	}
 	return false
 }
+
+//sample test
+console.log(isPangram('The quick brown fox jumps over the lazy dog'));
+console.log(isPangram('The quick brown fox jumps over the dog'));
