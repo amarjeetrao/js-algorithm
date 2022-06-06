@@ -7,7 +7,7 @@ const S1 = 'Amarjeet'
 
 function copyString(str) {
 	for (let i = 0; i < str.length; i++) {
-		copy += str[i];
+		copy += str[i]
 	}
 	return copy
 }
@@ -28,8 +28,8 @@ function copyString(s1, s3 = '', index = 0) {
 	if (index == s1.length) {
 		return s3
 	}
-	s3 += s1[index];
+	s3 += s1[index]
 	return copyString(s1, s3, index + 1)
 }
 //sample test
-let s3 = copyString(S1);
+let s3 = copyString(S1)
