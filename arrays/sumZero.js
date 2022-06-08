@@ -10,7 +10,7 @@ function sumZero(arr) {
 	let result = []
 
 	//avoid the iteration if the first element it self is a +ve value
-	if (arr[0] >= 0) {
+	if (arr.length && arr[0] >= 0) {
 		return result
 	}
 
