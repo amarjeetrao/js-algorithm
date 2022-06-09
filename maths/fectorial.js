@@ -19,7 +19,7 @@ console.log(factorial(4))
 
 // 2. Recursive Approach
 function factorial(num) {
-	if (num < 2) return num;
+	if (num < 2) return 1;
 	return num * factorial(num-1)
 }
 
