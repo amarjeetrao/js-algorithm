@@ -14,10 +14,10 @@ function linearSearch(arr, search) {
 }
 
 //Sample Test
-linearSearch([29, 22, 28, 11, 23, 34, 10, 9, 28, 2, 1, 5, 14, 18, 19, 21], 14)
+console.log(linearSearch([29, 22, 28, 11, 23, 34, 10, 9, 28, 2, 1, 5, 14, 18, 19, 21], 14))
 
 
-// 1. Recursive Approach
+// 2. Recursive Approach
 function linearSearch(arr, search) {
 	if (arr.length < 1) return -1;
 	if (arr[arr.length - 1] == search) return arr.length - 1;
@@ -26,4 +26,4 @@ function linearSearch(arr, search) {
 }
 
 //Sample Test
-linearSearch([29,22,28,11,23,34,10,9,28,2,1,5,14,18,19,21], 14)
+console.log(linearSearch([29,22,28,11,23,34,10,9,28,2,1,5,14,18,19,21], 14))

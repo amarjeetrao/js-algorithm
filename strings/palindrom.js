@@ -14,3 +14,7 @@ function isPalindrome(str) {
 	if (last === first) return isPalindrome(str.slice(1, -1));
 	return false;
 }
+
+//Sample Test
+console.log(isPalindrome('awesome'));
+console.log(isPalindrome('tacocat'));
