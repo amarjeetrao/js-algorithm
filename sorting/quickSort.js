@@ -1,7 +1,7 @@
 //Given an unsorted array of integer, sort the array using quick sort
 // quick Sort : pick a pivot element and sort arr acording to it (put everything that is less than pivot and put everything on the right that is bigger)
 // Time - O(log(n))
-// Space - O(n)
+// Space - O(log(n))
 
 function quickSort(arr, first = 0, last = arr.length - 1) {
 	if (first < last) {
