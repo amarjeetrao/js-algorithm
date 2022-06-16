@@ -5,28 +5,28 @@
 
 function quickSort(arr, first = 0, last = arr.length - 1) {
 	if (first < last) {
-		let pivotIndex = findPivot(arr, first)
+		let pivotIndex = findPivot(arr, first, last);
 		//go left
-		quickSort(arr, first, pivotIndex - 1)
+		if (first < pivotIndex - 1) quickSort(arr, first, pivotIndex - 1);
 		//go right
-		quickSort(arr, pivotIndex + 1, last)
+		if (pivotIndex < last) quickSort(arr, pivotIndex + 1, last);
 	}
 	return arr
 }
 
-function findPivot(arr, first) {
+function findPivot(arr, first, last) {
 	//initial pivot
 	let pivot = arr[first]
 	let pivotIndex = first
 
-	for (let i = first + 1; i < arr.length; i++) {
+	for (let i = first + 1; i <= last; i++) {
 		//move items less than pivot to adjusting to it
 		if (arr[i] < pivot) {
-			pivotIndex++
-			[arr[i], arr[pivotIndex]] = [arr[pivotIndex], arr[i]]
+			pivotIndex++;
+			[arr[i], arr[pivotIndex]] = [arr[pivotIndex], arr[i]];
 		}
 	}
-
+	//move the actual pivot to after adjusted elements
 	[arr[first], arr[pivotIndex]] = [arr[pivotIndex], arr[first]]
 	return pivotIndex
 }
