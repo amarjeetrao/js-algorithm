@@ -6,19 +6,19 @@
 //Auxiliary Space – O(1).
 
 function missCharsToMakePangram(str) {
-	let missChar = ''
-	let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+	let missChar = '';
+	let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 	for (let i = 0; i < alphabet.length; i++) {
 		//found the character
-		let indexOfChar = str.indexOf(alphabet[i])
+		let indexOfChar = str.indexOf(alphabet[i]);
 		if (indexOfChar == -1) {
-			missChar+=alphabet[i]
-			delete alphabet[i]
+			missChar += alphabet[i];
+			delete alphabet[i];
 		}
 	}
 
-	return missChar
+	return missChar;
 }
 
 //sample test

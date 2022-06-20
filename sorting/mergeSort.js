@@ -5,16 +5,15 @@
 
 function mergeSort(arr) {
 	//until array broken to length of 1 element
-	if (arr.length <= 1) return arr
+	if (arr.length <= 1) return arr;
 	//get the mid part for dividing big array
-	let mid = Math.floor(arr.length / 2)
+	let mid = Math.floor(arr.length / 2);
 	//get the left side of the sorted array after merging smallest unit
-	let left = mergeSort(arr.slice(0, mid))
+	let left = mergeSort(arr.slice(0, mid));
 	//get the right side of the sorted array after merging smallest unit
-	let right = mergeSort(arr.slice(mid))
+	let right = mergeSort(arr.slice(mid));
 	return merge(left, right);
 }
-
 
 function merge(arr1, arr2) {
 	let result = [];
@@ -23,11 +22,11 @@ function merge(arr1, arr2) {
 
 	while (i < arr1.length && j < arr2.length) {
 		if (arr1[i] < arr2[j]) {
-			result.push(arr1[i])
-			i++
+			result.push(arr1[i]);
+			i++;
 		} else {
-			result.push(arr2[j])
-			j++
+			result.push(arr2[j]);
+			j++;
 		}
 	}
 
@@ -40,13 +39,10 @@ function merge(arr1, arr2) {
 		j++;
 	}
 
-	return result
+	return result;
 }
-
 
 //Sample Test
 console.log(
-	mergeSort([
-		4, 5, 62, 2, -3, 4, 7, 9, 67, 4, 3, 3, 32, 545, 45, 64, 34, 5,
-	])
+	mergeSort([4, 5, 62, 2, -3, 4, 7, 9, 67, 4, 3, 3, 32, 545, 45, 64, 34, 5])
 );

@@ -7,23 +7,23 @@
 
 function isPangram(str) {
 	//to keep check of alphabet counter as if count == 26 that means all character where found
-	let count = 0
-	let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+	let count = 0;
+	let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
 	for (let i = 0; i < str.length; i++) {
 		//found the character
-		let char = str[i].toLowerCase()
-		let indexOfChar = alphabet.indexOf(char)
+		let char = str[i].toLowerCase();
+		let indexOfChar = alphabet.indexOf(char);
 		if (indexOfChar > -1) {
-			delete alphabet[indexOfChar]
-			count++
+			delete alphabet[indexOfChar];
+			count++;
 		}
 	}
 
 	if (count == 26) {
-		return true
+		return true;
 	}
-	return false
+	return false;
 }
 
 //sample test

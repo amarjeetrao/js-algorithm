@@ -9,12 +9,8 @@ function isAnagram(str1, str2) {
 
 	//store occurrence of each value on both arrays
 	for (const index in str1) {
-		hashmap1[str1[index]] = hashmap1[str1[index]]
-			? ++hashmap1[str1[index]]
-			: 1;
-		hashmap2[str2[index]] = hashmap2[str2[index]]
-			? ++hashmap2[str2[index]]
-			: 1;
+		hashmap1[str1[index]] = hashmap1[str1[index]] ? ++hashmap1[str1[index]] : 1;
+		hashmap2[str2[index]] = hashmap2[str2[index]] ? ++hashmap2[str2[index]] : 1;
 	}
 
 	//then compare the condition for arr1Elem == (square of arr2Elem)

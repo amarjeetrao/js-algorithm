@@ -5,28 +5,28 @@
 //Time - O(n) where n - length of given array
 
 function sumZero(arr) {
-	let left = 0
-	let right = arr.length - 1
-	let result = []
+	let left = 0;
+	let right = arr.length - 1;
+	let result = [];
 
 	//avoid the iteration if the first element it self is a +ve value
 	if (arr.length && arr[0] >= 0) {
-		return result
+		return result;
 	}
 
 	while (left < right) {
-		let sum = arr[left] + arr[right]
+		let sum = arr[left] + arr[right];
 		if (sum == 0) {
-			result.push([arr[left], arr[right]])
+			result.push([arr[left], arr[right]]);
 		}
 		if (sum > 0) {
-			right--
+			right--;
 		} else {
-			left++
+			left++;
 		}
 	}
 
-	return result
+	return result;
 }
 
 //sample test

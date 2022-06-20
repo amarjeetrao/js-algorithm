@@ -27,7 +27,6 @@ function binarySearch(arr, search) {
 //Sample Test
 console.log(binarySearch([3, 4, 5, 8, 9, 10, 14, 54, 66], 54));
 
-
 // 2. Recursive Approach
 function binarySearch(arr, search, left = 0, right) {
 	let mid = Math.floor((left + right) / 2);
@@ -42,9 +41,9 @@ function binarySearch(arr, search, left = 0, right) {
 			return binarySearch(arr, search, left, (right = mid - 1));
 		}
 	}
-	return -1
+	return -1;
 }
 
 //Sample Test
-let arr = [3, 4, 5, 8, 9, 10, 14, 54, 66]
+let arr = [3, 4, 5, 8, 9, 10, 14, 54, 66];
 console.log(binarySearch(arr, 54, 0, arr.length - 1));

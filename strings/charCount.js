@@ -6,14 +6,14 @@
 //Auxiliary Space – O(1).
 
 function charCount(str) {
-	const count = {}
+	const count = {};
 	for (let char of str) {
 		if (/[\w|\d]/.test(char)) {
 			char = char.toLowerCase();
 			count[char] = count[char] ? ++count[char] : 1;
 		}
 	}
-	return count
+	return count;
 }
 
 //sample test

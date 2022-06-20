@@ -11,13 +11,13 @@ function quickSort(arr, first = 0, last = arr.length - 1) {
 		//go right
 		if (pivotIndex < last) quickSort(arr, pivotIndex + 1, last);
 	}
-	return arr
+	return arr;
 }
 
 function findPivot(arr, first, last) {
 	//initial pivot
-	let pivot = arr[first]
-	let pivotIndex = first
+	let pivot = arr[first];
+	let pivotIndex = first;
 
 	for (let i = first + 1; i <= last; i++) {
 		//move items less than pivot to adjusting to it
@@ -27,8 +27,8 @@ function findPivot(arr, first, last) {
 		}
 	}
 	//move the actual pivot to after adjusted elements
-	[arr[first], arr[pivotIndex]] = [arr[pivotIndex], arr[first]]
-	return pivotIndex
+	[arr[first], arr[pivotIndex]] = [arr[pivotIndex], arr[first]];
+	return pivotIndex;
 }
 
 //Sample Test

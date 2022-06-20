@@ -5,21 +5,21 @@
 //Time - O(n) where n is length of array
 
 function countUnique(arr) {
-	let count = 0
-	let i = 0
-	let j = i + 1
+	let count = 0;
+	let i = 0;
+	let j = i + 1;
 
 	while (j <= arr.length) {
 		if (arr[i] != arr[j]) {
 			//move i to different number index
-			i = j
-			count++
+			i = j;
+			count++;
 		}
-		j++
+		j++;
 	}
 
-	return count
+	return count;
 }
 
 // Sample Test
-console.log(countUnique([1,1,1,1,2]));
+console.log(countUnique([1, 1, 1, 1, 2]));

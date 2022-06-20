@@ -22,7 +22,7 @@ console.log(powerOfTwo(15));
 
 // 2. Recursive Approach
 function powerOfTwo(num) {
-	if (num == 1) return true
+	if (num == 1) return true;
 	//fail case
 	if (num == 0 || num % 2 !== 0) return false;
 	return powerOfTwo(num / 2);

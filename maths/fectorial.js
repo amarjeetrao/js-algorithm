@@ -8,19 +8,18 @@
 function factorial(num) {
 	let factorial = num;
 	while (num > 2) {
-		factorial = factorial * --num
+		factorial = factorial * --num;
 	}
 	return factorial;
 }
 
 //sample test
-console.log(factorial(4))
-
+console.log(factorial(4));
 
 // 2. Recursive Approach
 function factorial(num) {
 	if (num < 2) return 1;
-	return num * factorial(num-1)
+	return num * factorial(num - 1);
 }
 
 //sample test

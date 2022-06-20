@@ -9,11 +9,11 @@ function isPrime(num) {
 	for (let i = 2; i < Math.sqrt(num); i++) {
 		//divisible by a number smaller than itself
 		if (n % i == 0) {
-			return false
+			return false;
 		}
 	}
 
-	return true
+	return true;
 }
 
 //sample test
@@ -22,14 +22,14 @@ console.log(isPrime(4));
 // 2. Recursive Approach
 function isPrime(num, i = 2) {
 	//pre check for less than 2
-	if (num < 2) return false
+	if (num < 2) return false;
 
 	//base case for exit (reached the number hence its a prime)
-	if (num == i) return true
+	if (num == i) return true;
 
 	//fail case
-	if (num % i == 0) return false
-	return isPrime(num, ++i)
+	if (num % i == 0) return false;
+	return isPrime(num, ++i);
 }
 
 //sample test

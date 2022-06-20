@@ -11,11 +11,11 @@ function insertionSort(arr) {
 		//iterate over the pre sorted part
 		while (j > -1 && arr[j] < arr[j - 1]) {
 			//current loop value is greater then the new element e.i. we will insert new elemnt and keep it comparing with other element of sorted part
-			[arr[j], arr[j-1]] = [arr[j-1], arr[j]]
+			[arr[j], arr[j - 1]] = [arr[j - 1], arr[j]];
 			j--;
 		}
 	}
-	return arr
+	return arr;
 }
 
 //Sample Test
