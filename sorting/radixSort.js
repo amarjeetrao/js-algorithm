@@ -17,7 +17,7 @@ function radixSort(arr) {
 			bucket[digitAtPosition].push(arr[i]);
 		}
 		arr = [].concat(...bucket);
-		console.log(arr)
+		console.log(arr);
 	}
 	return arr;
 }
